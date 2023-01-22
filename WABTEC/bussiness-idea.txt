@@ -1,0 +1,14 @@
+Centralised video storage stored by tier storage where you keep data online for a week or 2 weeks, depending on any regulatory compliances that may be applicable. 
+For eg- AWS S3 intelligent tiering or S3 glacier flexible retrival as a low cost archival with long term storage capability depending on requirements. This data can be kept available from 2 weeks to many years. 
+Retrival of the data would be in minutes or hours and only when needed. 
+
+
+Use public wifi/5G network to transmit the data 
+AES Video Encryption for secure live recording will ensure safe transfer of recording 
+While this is only with 1 camera, multiple cameras can be used as software will be mapping IP address of the cameras and multiple cameras can be used to detect anamolies simultaneously.
+
+
+Cameras vary from Rs 40000-150000
+Blind spots will be there irrespective of no of cameras and positioning of cameras. These 2 should be determined based on 
+size of yard, various obstructions including machines, trees, towers and railway wagons and engines
+
