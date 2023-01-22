@@ -41,3 +41,9 @@ The solution was developed and presented at The WABTEC EXCEED 2.0 Challenge by T
 3. Alokpunj Bagrodia - 6th sem B.Tech ECE
 
 
+# To Run the Solution 
+1. Go to WABTEC/yolov5 and run 'app.py' file. 
+
+2. The solution runs on the localhost and should open the login page. 
+
+3. The passwords '1234', '123456' will allow access to the home page. 
