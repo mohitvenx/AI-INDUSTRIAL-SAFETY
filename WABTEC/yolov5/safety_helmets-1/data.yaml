@@ -1,0 +1,6 @@
+names:
+- Helmet
+- No Helmet
+nc: 2
+train: safety_helmets-1/train/images
+val: safety_helmets-1/valid/images

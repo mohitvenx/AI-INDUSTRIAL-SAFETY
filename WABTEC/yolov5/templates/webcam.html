@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        CAM VIEW
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Your View</h5>
+                <a href="#" class="btn btn-primary" onClick="startCam()">Click Here to Start Cam</a>
+                <form>
+                  <input
+                    id="videoinput"
+                    type="file"
+                    name="video"
+                    onchange="readUrl(this)"
+                  />
+                </form>
+                <a href="#" class="btn btn-danger" onClick="stopCam()">Click Here to Stop Cam</a>
+                <div class="video-card">
+                    <video id="video" autoplay></video>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+<script>
+    // Start Cam function
+const startCam = () => {
+  //Initialize video
+  const video = document.getElementById("video");
+
+  // validate video element
+  if (navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices
+      .getUserMedia({ video: true })
+      .then((stream) => {
+        video.srcObject = stream;
+      })
+      .catch(function (error) {
+        console.log("Something went wrong!");
+      });
+  }
+};
+
+// Stop the webcam function
+const stopCam = () => {
+  let stream = video.srcObject;
+  let tracks = stream.getTracks();
+  tracks.forEach((track) => track.stop());
+  video.srcObject = null;
+};
+
+$(() => {
+  startCam();
+});
+
+
+
+function readUrl(input) {
+  imagebox = $("#imagebox");
+  console.log(imagebox);
+  console.log("evoked readUrl");
+  if (input.files && input.files[0]) {
+    let reader = new FileReader();
+    reader.onload = function (e) {
+      console.log(e.target);
+
+      imagebox.attr("src", e.target.result);
+      //   imagebox.height(500);
+      //   imagebox.width(800);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+</script>

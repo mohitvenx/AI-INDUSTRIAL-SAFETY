@@ -1,0 +1,6 @@
+names:
+- 'Helmet'
+- 'Vest'
+nc: 2
+train: hat-vest2-3/train/images
+val: hat-vest2-3/valid/images

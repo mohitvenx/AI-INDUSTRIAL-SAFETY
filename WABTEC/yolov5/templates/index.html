@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>VIEW FEED</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+
+</style>
+</head>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <!--<a href="{{url_for('campage')}}" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>HELMET DETECTION</p>
+  </a>
+  <a href="{{url_for('campageuav')}}" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>SAFETY HELMET AND VEST DETECTION</p>
+  </a>
+  <a href="{{url_for('campageti')}}" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>SAFETY VEST DETECTION</p>
+  </a> -->
+  <!--<a href="{{url_for('campage')}}" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>THERMAL</p>
+  </a> -->
+
+  </a>
+  <a href="{{url_for('login')}}" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>LOG OUT</p>
+  </a>
+</nav>
+  
+
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#viewfeed" class="w3-bar-item w3-button" style="width:25% !important">VIEW FEED</a>
+    <a href="#logout" class="w3-bar-item w3-button" style="width:25% !important">LOG OUT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">
+    <br>
+    <span style="color:#ff0800">WABTEC</span>
+    <span style="color:#ffffff"></span>
+    <span style="color:#70ff66"></span>
+    EXCEED 2.0</h1>
+    <h2> ARTIFICIAL INTELLIGENCE <span style="color:#ff0800">FOR SAFETY IN INDUSTRIAL SITES</span> </h2>
+        <p> Our solution helps improve Safety of workers in railway yards </p>
+        <p></p>    
+        <h2> TEAM <span style="color:#ff6600">PASTRA </span><span style="color:#ffffff"></span><span style="color:#70ff66"></span></h2>
+        <p> <span style="color:#bd4141">PES UNIVERSITY BANGALORE</span> </p>
+          </header>
+
+
+<!--
+          <form id="myForm" onsubmit="return validateForm()">
+            <input type="checkbox" id="checkbox1" name="SAFETY HELMET DETECTION" value="option1">
+            <label for="checkbox1">SAFETY HELMET DETECTION</label>
+            <br>
+            <input type="checkbox" id="checkbox2" name="SAFETY HELMET AND VEST DETECTION" value="option2">
+            <label for="checkbox2">SAFETY HELMET AND VEST DETECTION</label>
+            <br>
+            <input type="checkbox" id="checkbox3" name="SAFETY VEST DETECTION" value="option3">
+            <label for="checkbox2">SAFETY VEST DETECTION</label>
+            <br>
+            
+            <input type="submit" value="Submit">
+          </form>
+          
+          <script>
+            function validateForm() {
+              var checkBox1 = document.getElementById("checkbox1");
+              var checkBox2 = document.getElementById("checkbox2");
+              var form = document.getElementById("myForm");
+              if (checkBox1.checked == true){
+                form.action = "{{url_for('campage')}}";
+              } else if (checkBox2.checked == true){
+                form.action = "{{url_for('campageuav')}}";
+              } else {
+                form.action = "{{url_for('campageti')}}"
+              }
+              return true;
+            }
+          </script>
+
+-->
+<!--
+<div align = 'center'>
+<h3> Select 1 of the options as per your safety requirements </h3>
+<form id="myForm" onsubmit="return validateForm()">
+  <input type="checkbox" id="checkbox1" name="SAFETY HELMET DETECTION" value="option1">
+  <label for="checkbox1">SAFETY HELMET DETECTION</label>
+  &nbsp;&nbsp;&nbsp;
+  <input type="checkbox" id="checkbox2" name="SAFETY HELMET AND VEST DETECTION" value="option2">
+  <label for="checkbox2">SAFETY HELMET AND VEST DETECTION</label>
+  &nbsp;&nbsp;&nbsp;
+  <input type="checkbox" id="checkbox3" name="SAFETY VEST DETECTION" value="option3">
+  <label for="checkbox3">   SAFETY VEST DETECTION</label>
+  <br>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  function validateForm() {
+    var checkBox1 = document.getElementById("checkbox1");
+    var checkBox2 = document.getElementById("checkbox2");
+    var checkBox3 = document.getElementById("checkbox3");
+    var form = document.getElementById("myForm");
+    if (checkBox1.checked == true){
+      form.action = "{{url_for('campage')}}";
+    } else if (checkBox2.checked == true){
+      form.action = "{{url_for('campageuav')}}";
+    } else if (checkBox3.checked == true){
+      form.action = "{{url_for('campageti')}}"
+    }
+    return true;
+  }
+</script>
+
+-->
+
+<style>
+  .dropbtn {
+      background-color: rgb(255, 255, 255);
+      color: black;
+      padding: 10px;
+      font-size: 12px;
+  }
+  .dropdown {
+      display: inline-block;
+      position: relative
+  }
+  .dropdown-content {
+      position: absolute;
+      background-color: lightgrey;
+      min-width: 200px;
+      display: none;
+      z-index: 1;
+  }
+  .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+  }
+  .dropdown-content a:hover {
+      background-color: orange;
+  }
+  .dropdown:hover .dropdown-content {
+      display: block;
+  }
+  .dropdown:hover .dropbtn {
+      background-color: grey;
+  }
+  </style>
+  </Head>
+  <Body> 
+  <div align = 'center'>
+  <div class="dropdown", align = 'w3-center'>
+    <h3> Select 1 of the options as per your safety requirements </h3>
+  <button class="dropbtn"> Feature Requirements</button>
+  <div class="dropdown-content", align = 'center'>
+  <a href="{{ url_for('campage') }}"> SAFETY HELMET DETECTION </a>
+  <a href="{{ url_for('campageuav') }}"> SAFETY HELMET  AND VEST DETECTION </a>
+  <a href="{{ url_for('campageti') }}"> SAFETY VEST DETECTION </a>
+  </div>
+  </div>
+</div>
+  </Body> 
+
+ 
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>

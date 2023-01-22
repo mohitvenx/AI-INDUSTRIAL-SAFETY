@@ -1,0 +1,13 @@
+names:
+- No Vest
+- Vest
+nc: 2
+roboflow:
+  license: CC BY 4.0
+  project: safety-vests
+  url: https://universe.roboflow.com/project/safety-vests/dataset/5
+  version: 5
+  workspace: project
+test: ../test/images
+train: Safety-Vests-5/train/images
+val: Safety-Vests-5/valid/images
